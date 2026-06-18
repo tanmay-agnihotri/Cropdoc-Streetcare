@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+cropenv/
+*.egg-info/
+
+# Environment variables - NEVER commit these
+.env
+backend/.env
+
+# ML models (too large for GitHub)
+*.h5
+*.tflite
+ml/crop/dataset/
+ml/animal/dataset/
+
+# Node
+node_modules/
+.expo/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/settings.json
