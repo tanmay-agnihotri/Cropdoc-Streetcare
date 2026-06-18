@@ -3,7 +3,7 @@ import requests, os
 from dotenv import load_dotenv
 load_dotenv()
 
-API_KEY = os.getenv("55332cc6333061f44620145a7f6a2d85  ")
+API_KEY = os.getenv("OPENWEATHER_API_KEY")
 
 # Weather conditions that spike disease risk
 DISEASE_WEATHER_TRIGGERS = {

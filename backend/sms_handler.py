@@ -5,7 +5,7 @@ import os, base64, requests
 from dotenv import load_dotenv
 load_dotenv()
 
-client = Client(os.getenv("AC9c20c862a355380e955ce8a92f565fee"), os.getenv("f3ef19c7e3c8b282273d9ce3543cefb0   "))
+client = Client(os.getenv("TWILIO_ACCOUNT_SID"), os.getenv("TWILIO_AUTH_TOKEN"))
 
 async def handle_sms(form_data) -> str:
     """
@@ -22,7 +22,7 @@ async def handle_sms(form_data) -> str:
 
     if media_url is None:
         resp.message(
-            "CropDoc / StreetCare\n\n"
+            "🌿 CropDoc / StreetCare\n\n"
             "Send a photo of:\n"
             "• A crop leaf → get disease diagnosis\n"
             "• A stray animal → get health advice\n\n"
