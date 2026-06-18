@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 supabase = create_client(
-    os.getenv("https://klvxpkinwcyvdqqfqzvi.supabase.co"),
-    os.getenv("sb_publishable_qrI-wKc_FV42WVIoQdQCSg_RWjyoDbp")
+    os.getenv("SUPABASE_URL"),
+    os.getenv("SUPABASE_KEY")
 )
 
 def save_crop_report(condition, confidence, severity, lat, lon, city):
