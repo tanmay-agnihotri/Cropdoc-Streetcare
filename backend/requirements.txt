@@ -3,10 +3,12 @@ uvicorn==0.27.0
 python-multipart==0.0.9
 Pillow==10.4.0
 numpy==1.26.4
-tensorflow==2.16.1
+tflite-runtime
 twilio==8.10.0
 gTTS==2.5.1
 python-dotenv==1.0.1
 supabase==2.3.4
 requests==2.31.0
+opencv-python-headless==4.9.0.80
+anthropic==0.25.0anthropic==0.25.0
 opencv-python-headless==4.9.0.80
