@@ -1,7 +1,7 @@
 from fastapi import FastAPI, File, UploadFile, Form, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, FileResponse, StreamingResponse
-import uvicorn, os, io, base64
+import uvicorn, os, io, base64, logging
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -45,6 +45,7 @@ async def predict_crop_endpoint(
             from gradcam_api import generate_gradcam_b64
             result["gradcam_image"] = generate_gradcam_b64(image_bytes, result.get("top_class_idx", 0))
         except Exception as e:
+            logging.getLogger("cropdoc").warning("Grad-CAM generation failed: %s", e)
             result["gradcam_image"] = None
 
     return JSONResponse(content=result)
